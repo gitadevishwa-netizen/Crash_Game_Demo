@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: radial-gradient(1200px 600px at 50% 0%, #1b2a4e, #0b1020);
+  color: #eaf0ff;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+.card {
+  width: min(92vw, 520px);
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+}
+h1 {
+  margin: 0 0 8px;
+  font-size: 1.4rem;
+}
+.muted {
+  opacity: .8;
+  font-size: .9rem;
+}
+.display {
+  margin: 16px 0;
+  height: 140px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.45));
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.multiplier {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: .5px;
+}
+.plane {
+  position: absolute;
+  left: 10%;
+  bottom: 20%;
+  font-size: 1.5rem;
+  animation: float 2s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+.status {
+  text-align: center;
+  font-size: .95rem;
+  margin-top: 4px;
+  opacity: .9;
+}
+.controls {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 12px;
+  margin-top: 12px;
+  align-items: end;
+}
+.field label {
+  display: block;
+  font-size: .8rem;
+  opacity: .85;
+  margin-bottom: 4px;
+}
+.field input {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font: inherit;
+  background: rgba(0,0,0,0.3);
+  color: #fff;
+}
+button {
+  border: none;
+  border-radius: 999px;
+  padding: 10px 14px;
+  font: inherit;
+  cursor: pointer;
+  transition: transform .08s ease, box-shadow .08s ease, background .15s ease;
+}
+button:active {
+  transform: translateY(1px) scale(.99);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+}
+.btn-start {
+  background: linear-gradient(135deg, #2ecc71, #20bf6b);
+  color: #041314;
+}
+.btn-cashout {
+  background: linear-gradient(135deg, #f1c40f, #e67e22);
+  color: #1b1304;
+}
+.btn-disabled {
+  background: #555a70;
+  color: #c3c7dd;
+  cursor: not-allowed;
+}
+.footer {
+  margin-top: 14px;
+  font-size: .75rem;
+  opacity: .7;
+  line-height: 1.4;
+}
+.balance-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-size: .9rem;
+}
+.highlight {
+  color: #f1c40f;
+  font-weight: 600;
+}
+
