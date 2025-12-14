@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crash Game Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="card">
+    <h1>Crash Game Demo</h1>
+    <div class="muted">Free‑to‑play demo with fake credits only. No real money, no deposits, no withdrawals.</div>
+
+    <div class="display">
+      <div class="multiplier" id="multiplier">1.00x</div>
+      <div class="plane" id="plane">✈️</div>
+    </div>
+    <div class="status" id="status">Waiting for next round…</div>
+
+    <div class="balance-row">
+      <div>Balance: <span class="highlight" id="balance">1000.00</span> credits</div>
+      <div>Last result: <span id="lastResult">–</span></div>
+    </div>
+
+    <div class="controls">
+      <div class="field">
+        <label for="bet">Bet amount (credits)</label>
+        <input type="number" id="bet" min="0.01" step="0.01" value="10" />
+      </div>
+      <div>
+        <button id="startBtn" class="btn-start">Start Round</button>
+        <button id="cashoutBtn" class="btn-cashout" style="margin-left:8px;" disabled>Cash Out</button>
+      </div>
+    </div>
+
+    <div class="footer">
+      This is an educational crash‑game simulation. Use it only for learning and entertainment with virtual credits.
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
